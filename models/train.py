@@ -7,3 +7,9 @@ from tensorflow.keras.layers import Dense
 from tensorflow.keras.callbacks import EarlyStopping
 from tensorflow.keras.models import load_model
 
+df = pd.read_scv('data/customer_churn.csv')
+
+x = df.drop(['CustomerId','Surname','Exited'],axis=1)
+
+y = df['Exited']
+
